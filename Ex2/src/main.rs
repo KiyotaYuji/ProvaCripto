@@ -5,10 +5,9 @@ use std::fs::File;
 use std::io::{self, Read};
 use std::path::Path;
 
-const BASE_PATH: &str = r"C:\Users\YujiKiyota\OneDrive\Área de Trabalho\Faculdade\Quinto Periodo\Cripto\marco-19\arquivos";
-
-fn Caminho(nomeArquivo: &str) -> std::path::PathBuf{
-    let mut caminho = std::path::PathBuf::from(BASE_PATH);
+fn Caminho(nomeArquivo: &str) -> std::path::PathBuf {
+    let mut caminho = std::env::current_dir().expect("Não foi possível obter o diretório atual");
+    caminho.push("arquivos");
     caminho.push(nomeArquivo);
     caminho
 }
