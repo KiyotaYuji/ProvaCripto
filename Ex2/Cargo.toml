@@ -1,0 +1,7 @@
+[package]
+name = "marco-19"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
